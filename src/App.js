@@ -1,118 +1,49 @@
-// src/App.js
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
+import React from 'react'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
-const Home = () => {
-  return (
-    <div>
-      <h2>Welcome to the Home Page!</h2>
-      <p>This is the home page content.</p>
-    </div>
-  );
-};
+import Login from './components/login.component'
+import SignUp from './components/signup.component'
 
-const SignUp = ({ setLoggedIn }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleSignUp = () => {
-    // Perform sign-up logic here (e.g., API call, authentication, etc.)
-    // For simplicity, let's just set a flag to indicate successful sign-up
-    setLoggedIn(true);
-  };
-
-  return (
-    <div style={formContainerStyle}>
-      <h2>Sign Up</h2>
-      <form onSubmit={(e) => { e.preventDefault(); handleSignUp(); }}>
-        <label>
-          Username:
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </label>
-        <br />
-        <button type="submit" style={buttonStyle}>Sign Up</button>
-      </form>
-    </div>
-  );
-};
-
-const Login = ({ setLoggedIn }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleLogin = () => {
-    // Perform login logic here (e.g., API call, authentication, etc.)
-    // For simplicity, let's just set a flag to indicate successful login
-    setLoggedIn(true);
-  };
-
-  return (
-    <div style={formContainerStyle}>
-      <h2>Login</h2>
-      <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
-        <label>
-          Username:
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </label>
-        <br />
-        <button type="submit" style={buttonStyle}>Login</button>
-      </form>
-    </div>
-  );
-};
-
-const formContainerStyle = {
-  width: '300px',
-  margin: 'auto',
-  marginTop: '50px',
-  padding: '20px',
-  border: '1px solid #ccc',
-  borderRadius: '5px',
-};
-
-const buttonStyle = {
-  backgroundColor: '#4CAF50',
-  color: 'white',
-  padding: '10px 15px',
-  margin: '8px 0',
-  border: 'none',
-  borderRadius: '4px',
-  cursor: 'pointer',
-};
-
-const App = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
-
+function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li>
-            <li><Link to="/login">Login</Link></li>
-          </ul>
+      <div className="App">
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+          <div className="container">
+            <Link className="navbar-brand" to={'/sign-in'}>
+              positronX
+            </Link>
+            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/sign-in'}>
+                    Login
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/sign-up'}>
+                    Sign up
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
 
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/signup" render={() => <SignUp setLoggedIn={setLoggedIn} />} />
-          <Route path="/login" render={() => <Login setLoggedIn={setLoggedIn} />} />
-          {loggedIn && <Redirect to="/" />}
-        </Switch>
+        <div className="auth-wrapper">
+          <div className="auth-inner">
+            <Routes>
+              <Route exact path="/" element={<Login />} />
+              <Route path="/sign-in" element={<Login />} />
+              <Route path="/sign-up" element={<SignUp />} />
+            </Routes>
+          </div>
+        </div>
       </div>
     </Router>
-  );
-};
+  )
+}
 
-export default App;
+export default App
