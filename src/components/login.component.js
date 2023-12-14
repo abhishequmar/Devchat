@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
 export default class Login extends Component {
   render() {
@@ -38,12 +39,13 @@ export default class Login extends Component {
         </div>
 
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
-            Submit
+          <button type="submit" className="btn btn-primary" onClick={"/home-screen"}>
+          <a href="/home-screen">Login</a>
+            
           </button>
         </div>
         <p className="forgot-password text-right">
-          Forgot <a href="#">password?</a>
+          Dont't have an account?  <a href="/sign-up">Signup</a>
         </p>
       </form>
     )
