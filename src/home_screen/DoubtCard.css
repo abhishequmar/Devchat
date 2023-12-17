@@ -3,22 +3,23 @@
 
   display: flex;
   
-  width: 80%;
+  width: 350px;
   background-color: #2e2147; /* Dark purple background color */
-  padding: 16px;
+  padding: 5px;
   border-radius: 8px;
-  margin-bottom: 16px;
-  margin-left: 16px;
+  margin-bottom: 5px;
+  margin-left: 10px;
   border: 2px solid #4b3674; /* Purple border color */
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds container height */
 }
 
 .avatar-container {
-  margin-right: 16px;
+  margin-right: 5px;
 }
 
 .avatar {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
 }
 
@@ -28,14 +29,16 @@
 
 .title {
   margin: 0;
+  font-size: small;
+  
 }
 
 .details {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .details p {
-  margin: 8px 0;
+  margin: 0px 0;
 }
 
 button {

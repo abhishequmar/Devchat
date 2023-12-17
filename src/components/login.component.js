@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-
+import './SignupLogin.css'
 export default class Login extends Component {
   render() {
     return (
-      <form>
+      <div className='authcard'>
+        <form >
         <h3>Sign In</h3>
 
-        <div className="mb-3">
+        <div>
           <label>Email address</label>
           <input
             type="email"
@@ -16,7 +17,7 @@ export default class Login extends Component {
           />
         </div>
 
-        <div className="mb-3">
+        <div >
           <label>Password</label>
           <input
             type="password"
@@ -48,6 +49,8 @@ export default class Login extends Component {
           Dont't have an account?  <a href="/sign-up">Signup</a>
         </p>
       </form>
+      </div>
+      
     )
   }
 }

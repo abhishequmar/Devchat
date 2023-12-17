@@ -4,6 +4,7 @@ import DoubtCard from './DoubtCard';
 import AddDoubtModal from './AddDoubtModal';
 
 import './App.css'; // Import the CSS file
+import './DoubtCardContainer.css'
 //dummy
 const HomeScreen = () => {
    const [isModalOpen, setIsModalOpen] = useState(false);
@@ -65,7 +66,8 @@ const HomeScreen = () => {
       <CustomNavbar/>
       <div style={{ display: 'flex' }}>
   {/* First container */}
-  <div className="container">
+  <div>
+      <div className="doubtCardContainer">
     <h3>Latest Doubts</h3>
     {doubts.map((doubt, index) => (
       <DoubtCard key={index} {...doubt} />
@@ -80,6 +82,8 @@ const HomeScreen = () => {
     ))}
   </div>
 
+  </div>
+  
     <button className="button" onClick={openModal}>
         Add Doubt
     </button>

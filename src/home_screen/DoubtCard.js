@@ -15,7 +15,7 @@ const DoubtCard = ({ avatar, title, code, questionLink }) => {
         <img src={avatar} alt="User Avatar" className="avatar" />
       </div>
       <div className="content">
-        <h3 className="title">{title}</h3>
+        <p className="title">{title}</p>
         {showDetails && (
           <div className="details">
             <p><strong>Question Link:</strong> {questionLink}</p>
@@ -24,9 +24,9 @@ const DoubtCard = ({ avatar, title, code, questionLink }) => {
             
           </div>
         )}
-        <button onClick={handleToggleDetails}>
+        {/* <button onClick={handleToggleDetails}>
           {showDetails ? 'Hide Details' : 'Show Details'}
-        </button>
+        </button> */}
       </div>
     </div>
   );
