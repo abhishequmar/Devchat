@@ -14,7 +14,8 @@
 }
 
 .avatar-container {
-  margin-right: 5px;
+  width: 40px;
+  margin-right: 0px;
 }
 
 .avatar {

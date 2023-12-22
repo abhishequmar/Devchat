@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CustomNavbar from './Navbar';
 import DoubtCard from './DoubtCard';
 import AddDoubtModal from './AddDoubtModal';
+import ChatPage from './doubt_chat/ChatPage';
 
 import './App.css'; // Import the CSS file
 import './DoubtCardContainer.css'
@@ -84,9 +85,10 @@ const HomeScreen = () => {
 
   </div>
   
-    <button className="button" onClick={openModal}>
+    {/* <button className="button" onClick={openModal}>
         Add Doubt
-    </button>
+    </button> */}
+    <ChatPage />
     <AddDoubtModal
         isOpen={isModalOpen}
         onRequestClose={closeModal}
