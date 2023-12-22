@@ -5,23 +5,24 @@
     background: rgb(41, 41, 41);
     overflow: scroll;
     scrollbar-color: transparent;
+    -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .doubtCardContainer ::-webkit-scrollbar{
     width: 0px;
 }
 
-
-::-webkit-scrollbar-thumb{
-    background: transparent;
-    border-radius: 0px;
+.doubtCardContainer::-webkit-scrollbar {
+  display: none;
 }
 
-::-webkit-scrollbar-thumb:hover{
-    background: transparent;
+.doubtCardContainer p {
+  color: #fff;
+  
 }
 
 .titlec{
     font-size: large;
-    
+
     color: white;
 } 

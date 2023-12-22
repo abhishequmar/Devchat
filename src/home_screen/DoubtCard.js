@@ -16,14 +16,14 @@ const DoubtCard = ({ avatar, title, code, questionLink }) => {
       </div>
       <div className="content">
         <p className="title">{title}</p>
-        {showDetails && (
+        {/* {showDetails && (
           <div className="details">
             <p><strong>Question Link:</strong> {questionLink}</p>
             <p><strong>Code:</strong> </p>
             <p><code>{code}</code></p>
             
           </div>
-        )}
+        )} */}
         {/* <button onClick={handleToggleDetails}>
           {showDetails ? 'Hide Details' : 'Show Details'}
         </button> */}

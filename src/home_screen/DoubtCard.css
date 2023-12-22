@@ -2,7 +2,7 @@
 .doubt-card {
 
   display: flex;
-  
+  height: 40px;
   width: 350px;
   background-color: #2e2147; /* Dark purple background color */
   padding: 5px;
@@ -25,17 +25,19 @@
 }
 
 .content {
+  height: 40px;
   color: #ffffff; /* White text color */
 }
 
 .title {
+  padding: 0px;
   margin: 0;
   font-size: small;
   
 }
 
 .details {
-  margin-top: 4px;
+  margin-top: 0px;
 }
 
 .details p {
