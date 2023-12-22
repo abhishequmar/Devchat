@@ -5,7 +5,7 @@ import AddDoubtModal from './AddDoubtModal';
 import ChatPage from './doubt_chat/ChatPage';
 
 import './App.css'; // Import the CSS file
-import './DoubtCardContainer.css'
+import './DoubtCardContainer.css';  
 //dummy
 const HomeScreen = () => {
    const [isModalOpen, setIsModalOpen] = useState(false);
@@ -69,15 +69,15 @@ const HomeScreen = () => {
   {/* First container */}
   <div>
       <div className="doubtCardContainer">
-    <h3>Latest Doubts</h3>
+    <h3 className='titlec' >Latest Doubts</h3>
     {doubts.map((doubt, index) => (
       <DoubtCard key={index} {...doubt} />
     ))}
   </div>
 
   {/* Second container */}
-  <div className="container">
-    <h3>My Doubts</h3>
+  <div className="doubtCardContainer">
+    <h3 className='titlec'>My Doubts</h3>
     {doubts.map((doubt, index) => (
       <DoubtCard key={index} {...doubt} />
     ))}

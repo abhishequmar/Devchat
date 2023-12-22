@@ -1,13 +1,15 @@
 .doubtCardContainer{
+    text-decoration-color: white;
     height: 48vh;
     width: 400px;
-    background: yellow;
+    background: rgb(41, 41, 41);
     overflow: scroll;
     scrollbar-color: transparent;
 }
 .doubtCardContainer ::-webkit-scrollbar{
     width: 0px;
 }
+
 
 ::-webkit-scrollbar-thumb{
     background: transparent;
@@ -16,4 +18,9 @@
 
 ::-webkit-scrollbar-thumb:hover{
     background: transparent;
+}
+
+.titlec{
+    font-size: large;
+    color: white;
 }
