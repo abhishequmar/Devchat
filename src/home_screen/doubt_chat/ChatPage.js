@@ -6,7 +6,13 @@ import "./ChatPage.css"
 
 const ChatPage = () => {
   const [messages, setMessages] = useState([
-    { text: 'Hello!', sender: 'user' },
+    { text: `const CodeEditorWindow = ({ onChange, language, code, theme }) => {
+  const [value, setValue] = useState(code || "");
+
+  const handleEditorChange = (value) => {
+    setValue(value);
+    onChange("code", value);
+  };`, sender: 'user' },
     { text: 'Hi there!', sender: 'bot' },
     // Add more predefined messages as needed
   ]);
