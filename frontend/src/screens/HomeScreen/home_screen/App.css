@@ -1,0 +1,18 @@
+/* App.css */
+.appcontainer {
+  
+  color: black;
+  background-color: black;
+}
+button {
+  height: 30px;
+  width: 125px;
+  background-color: #6a57af; /* Purple button background color */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+

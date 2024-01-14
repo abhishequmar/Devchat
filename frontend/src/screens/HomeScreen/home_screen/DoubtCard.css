@@ -1,0 +1,59 @@
+/* DoubtCard.css */
+.doubt-card {
+
+  display: flex;
+  height: 40px;
+  width: 350px;
+  background-color: #2e2147; /* Dark purple background color */
+  padding: 5px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  border: 2px solid #4b3674; /* Purple border color */
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds container height */
+}
+
+.avatar-container {
+  width: 40px;
+  margin-right: 0px;
+}
+
+.avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.content {
+  height: 40px;
+  color: #ffffff; /* White text color */
+}
+
+.title {
+  padding: 0px;
+  margin: 0;
+  font-size: small;
+  
+}
+
+.details {
+  margin-top: 0px;
+}
+
+.details p {
+  margin: 0px 0;
+}
+
+button {
+  background-color: #6a57af; /* Purple button background color */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8c74c6; /* Darker purple on hover */
+}
